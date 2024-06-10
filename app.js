@@ -4,27 +4,17 @@ const allItems = document.getElementById('allItems');
 const personInput = document.getElementById('personInput');
 
 
+removeItems.addEventListener('click', function(){
+  allItems.innerHTML = ' ';
 
-removeItems.addEventListener("click", function(){
-  allItems.innerHTML = "";
-  console.log(removeItems);
 })
-
 
 personInput.addEventListener('keydown', function(event){
-  if (event.key == "Enter")
-    addItem();
+if(event.key==='Enter')
+  enterItem();
 })
 
-function addItem(){
-let h3 =document.createElement('h3');
-h3.innerHTML = '- ' + personInput.value;
-
-h3.addEventListener('click', function(){
-  h3.style.textDecoration = "line-through";
-
-})
-allItems.insertAdjacentElement("beforeend", h3);
-personInput.value = "";
-
+function enterItem(){
+  let h3 = document.createElement('h3');
+  h3.innerHTML = '- ' + personInput.value;
 }
