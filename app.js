@@ -17,4 +17,9 @@ if(event.key==='Enter')
 function enterItem(){
   let h3 = document.createElement('h3');
   h3.innerHTML = '- ' + personInput.value;
+
+
+  h3.addEventListener('click', function(){
+    h3.style.textDecoration('line-through')  
+  })
 }
