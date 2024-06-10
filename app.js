@@ -10,7 +10,7 @@ removeItems.addEventListener('click', function(){
 })
 
 personInput.addEventListener('keydown', function(event){
-if(event.key==='Enter')
+if(event.key=="Enter")
   enterItem();
 })
 
@@ -20,6 +20,8 @@ function enterItem(){
 
 
   h3.addEventListener('click', function(){
-    h3.style.textDecoration('line-through')  
+    h3.style.textDecoration= 'line-through';
   })
+  allItems.insertAdjacentElement('beforeend', h3);
+  personInput.value = '';
 }
